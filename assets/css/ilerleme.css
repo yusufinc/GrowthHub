@@ -1,0 +1,88 @@
+.ilerleme-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 80px auto 0;
+}
+
+.ilerleme-header {
+  margin-bottom: 2rem;
+}
+
+.charts-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.chart-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-box canvas {
+  max-height: 400px;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stats-box,
+.rozetler-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rozet {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--bg-light);
+  margin-bottom: 1rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.rozet.earned {
+  opacity: 1;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rozet i {
+  font-size: 1.5rem;
+}
+
+.rozet .bronze {
+  color: #cd7f32;
+}
+.rozet .silver {
+  color: #c0c0c0;
+}
+.rozet .gold {
+  color: #ffd700;
+}
+.rozet .fa-fire {
+  color: #ff4136;
+}
+
+.rozet span {
+  font-weight: bold;
+}
+
+.rozet small {
+  color: #666;
+  margin-left: auto;
+}

@@ -1,0 +1,137 @@
+.anasayfa-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.motivation-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 320px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card p {
+  color: var(--text-dark);
+  padding: 0 1rem 1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.motivation-quote {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), #0a4fa0);
+  border-radius: 15px;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.motivation-quote p {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1001;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--white);
+  margin: 5% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  animation: modalOpen 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .motivation-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .card img {
+    height: 240px;
+  }
+}
